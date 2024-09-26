@@ -54,3 +54,6 @@ firebase.json
 # FVM Version Cache
 .fvm/
 .fvmrc
+
+ios/config/dev
+ios/config/prod
