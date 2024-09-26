@@ -13,7 +13,7 @@ void main() async {
   await dotenv.load(fileName: ".env");
   FlavorConfig(
       name: "PROD",
-      color: Colors.blue,
+      color: const Color(0xff5b30f4),
       location: BannerLocation.topStart,
       variables: {
         "env": "production",

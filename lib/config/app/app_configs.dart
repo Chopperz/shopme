@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'ShopMe',
       theme: ThemeData(
+        primaryColor: FlavorConfig.instance.color,
         colorScheme: ColorScheme.fromSeed(seedColor: FlavorConfig.instance.color),
         useMaterial3: true,
       ),
