@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shopme/config/firebase/app_firebase.dart';
+import 'package:shopme/feature/auth/login/cubit/login_cubit.dart';
 import 'package:shopme/feature/auth/login/login_screen.dart';
 import 'package:shopme/feature/auth/register/register_screen.dart';
 import 'package:shopme/feature/home/home_screen.dart';
@@ -69,7 +71,10 @@ final class AppRouter {
       path: RouteName.login.path,
       pageBuilder: (BuildContext context, GoRouterState state) => _MyCustomTransitionPage(
         key: state.pageKey,
-        child: const LoginScreen(),
+        child: BlocProvider<LoginCubit>(
+          create: (_) => LoginCubit(),
+          child: const LoginScreen(),
+        ),
       ),
       routes: [
         GoRoute(
