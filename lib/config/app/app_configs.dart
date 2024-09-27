@@ -1,16 +1,29 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shopme/config/l10n/l10n.dart';
 
 import 'package:shopme/config/router/router.dart';
+import 'package:shopme/core/constants/app_constants.dart';
 import 'package:shopme/core/providers/providers.dart';
+import 'package:shopme/core/services/services.dart';
 import 'package:shopme/theme/app_theme.dart';
 
 void runAppInitial() async {
+  Directory dir = await getTemporaryDirectory();
+  appDirectoryPath = dir.path;
+  HydratedBloc.storage = await HydratedStorage.build(storageDirectory: dir);
+  sharedPreferences = await SharedPreferences.getInstance();
+  await DioService.initialize();
+  await DynamicLinksService.instance.initDeepLinks();
   FlutterNativeSplash.remove();
   runApp(const MyApp());
 }

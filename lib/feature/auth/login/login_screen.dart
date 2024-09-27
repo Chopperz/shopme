@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shopme/config/app/app_configs.dart';
 import 'package:shopme/config/router/router.dart';
+
+export 'cubit/login_cubit.dart';
 
 part 'widgets/login_authen_selection.dart';
 part 'widgets/login_background.dart';

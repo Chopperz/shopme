@@ -4,6 +4,7 @@ mixin _ThemeModeColor {
   ThemeData get light => ThemeData.light(
         useMaterial3: true,
       ).copyWith(
+        primaryColor: FlavorConfig.instance.color,
         colorScheme: ColorScheme.fromSeed(
           primary: FlavorConfig.instance.color,
           seedColor: FlavorConfig.instance.color,
@@ -17,6 +18,7 @@ mixin _ThemeModeColor {
         useMaterial3: true,
       ).copyWith(
         cardColor: Colors.grey.shade900,
+        primaryColor: FlavorConfig.instance.color,
         colorScheme: ColorScheme.dark(
           primary: FlavorConfig.instance.color,
           inversePrimary: Colors.indigoAccent.shade400,

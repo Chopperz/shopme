@@ -1,5 +1,7 @@
 part of '../login_screen.dart';
 
+enum LoginAuthType {member, facebook, google, apple}
+
 class LoginAuthSelection extends StatelessWidget {
   const LoginAuthSelection({super.key});
 
@@ -63,7 +65,7 @@ class LoginAuthSelection extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => context.goNamed(RouteName.register.name),
             style: ButtonStyle(
               fixedSize: WidgetStatePropertyAll<Size>(
                 Size(size.width - 60 - 40, 45),

@@ -9,14 +9,4 @@ extension BuildContextExtensions<T> on BuildContext {
   bool get isDarkMode => theme.brightness == Brightness.dark;
 
   AppLocalizations? get localize => AppLocalizations.of(this);
-
-  Future<T?> go(Route<T> route) => Navigator.of(this).push(route);
-
-  Future<T?> goNamed(String routeName, {Object? arguments}) =>
-      Navigator.of(this).pushNamed(routeName, arguments: arguments);
-
-  void back({T? result}) => Navigator.pop(this, result);
-
-  void backUntil({bool Function(Route<dynamic>)? predicate}) =>
-      Navigator.popUntil(this, predicate ?? (route) => false);
 }
