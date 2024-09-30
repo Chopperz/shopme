@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "468379818151",
-    "project_id": "shopme-dev-a8d69",
-    "storage_bucket": "shopme-dev-a8d69.appspot.com"
+    "project_number": "1075161723771",
+    "project_id": "shopme-dev-47556",
+    "storage_bucket": "shopme-dev-47556.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:468379818151:android:bb98655d8014bb2a072382",
+        "mobilesdk_app_id": "1:1075161723771:android:7d13db23f88431294143de",
         "android_client_info": {
           "package_name": "com.example.shopme"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDOsAw07-XocBSuzznBBC2HA5tAobQNx6U"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:468379818151:android:a2b4f0b046b0f165072382",
-        "android_client_info": {
-          "package_name": "com.example.shopme.dev"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDOsAw07-XocBSuzznBBC2HA5tAobQNx6U"
+          "current_key": "AIzaSyCLpucPOyue-7Dj30tBGviWdBFG5u2sZJM"
         }
       ],
       "services": {

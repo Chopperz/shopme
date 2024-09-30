@@ -44,7 +44,7 @@ app.*.map.json
 /android/app/dev
 /android/app/prod
 
-lib/firebase/src/
+lib/firebase/src/dev_firebase_options.dart
 firebase.json
 
 .env
