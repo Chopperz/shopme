@@ -1,4 +1,4 @@
-name: DEV Deployment for Android Action
+name: PROD Deployment for Android Action
 
 on: workflow_dispatch
 #  push:
