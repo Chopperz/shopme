@@ -44,7 +44,7 @@ app.*.map.json
 /android/app/dev
 /android/app/prod
 
-lib/firebase/src
+lib/config/firebase/src
 firebase.json
 
 .env
