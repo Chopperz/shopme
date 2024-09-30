@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shopme/config/firebase/app_firebase.dart';
 import 'package:shopme/feature/auth/login/login_screen.dart';
@@ -42,7 +43,7 @@ final class AppRouter {
   );
 
   static Future<String?> _redirect(BuildContext context, GoRouterState state) async {
-    debugPrint("Redirect: Path => ${state.matchedLocation}");
+    // debugPrint("Redirect: Path => ${state.matchedLocation}");
 
     if (AppFirebase.instance.user == null) {
       String currentRouteName = (state.matchedLocation.split("/")..remove("")).last;
@@ -69,7 +70,10 @@ final class AppRouter {
       path: RouteName.login.path,
       pageBuilder: (BuildContext context, GoRouterState state) => _MyCustomTransitionPage(
         key: state.pageKey,
-        child: const LoginScreen(),
+        child: BlocProvider<LoginCubit>(
+          create: (_) => LoginCubit(),
+          child: const LoginScreen(),
+        ),
       ),
       routes: [
         GoRoute(
