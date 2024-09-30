@@ -7,19 +7,19 @@ class LoginBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Hero(
-      tag: "shopme-bg-authenticate",
-      child: SizedBox(
-        width: size.width,
-        height: size.height / 1.9,
+    return SizedBox(
+      width: size.width,
+      height: size.height / 1.9,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
+        ),
         child: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
-          ),
-          child: Container(
-            margin: const EdgeInsets.only(top: 70),
-            alignment: Alignment.topCenter,
+          margin: const EdgeInsets.only(top: 70),
+          alignment: Alignment.topCenter,
+          child: Hero(
+            tag: "app-logo-hero",
             child: Image.asset(
               "assets/images/backgrounds/app-splash.png",
               width: 250,

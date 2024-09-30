@@ -132,7 +132,7 @@ class AppTextFormFiled extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  color: Colors.grey.shade200,
+                  color: Colors.grey.shade500,
                   letterSpacing: 1,
                 ),
               ),
@@ -143,7 +143,7 @@ class AppTextFormFiled extends StatelessWidget {
         Container(
           height: height,
           decoration: BoxDecoration(
-            color: backgroundColor ?? Colors.white,
+            color: backgroundColor ?? Colors.grey.shade200,
             borderRadius: BorderRadius.circular(8),
           ),
           child: TextFormField(

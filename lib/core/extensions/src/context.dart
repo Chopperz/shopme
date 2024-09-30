@@ -9,4 +9,6 @@ extension BuildContextExtensions<T> on BuildContext {
   bool get isDarkMode => theme.brightness == Brightness.dark;
 
   AppLocalizations? get localize => AppLocalizations.of(this);
+
+  Size get deviceSize => mediaQuery.size;
 }
