@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shopme/config/firebase/app_firebase.dart';
 import 'package:shopme/feature/auth/login/login_screen.dart';
+import 'package:shopme/feature/auth/register/cubit/register_cubit.dart';
 import 'package:shopme/feature/auth/register/register_screen.dart';
 import 'package:shopme/feature/home/home_screen.dart';
 import 'package:shopme/feature/landing/landing_screen.dart';
@@ -79,7 +80,10 @@ final class AppRouter {
         GoRoute(
           name: RouteName.register.name,
           path: RouteName.register.name,
-          builder: (BuildContext context, GoRouterState state) => const RegisterScreen(),
+          builder: (BuildContext context, GoRouterState state) => BlocProvider<RegisterCubit>(
+            create: (_) => RegisterCubit(),
+            child: const RegisterScreen(),
+          ),
         ),
       ],
     ),
