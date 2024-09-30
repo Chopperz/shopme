@@ -1,27 +1,27 @@
 PODS:
   - app_links (0.0.2):
     - Flutter
-  - Firebase/Auth (11.0.0):
+  - Firebase/Auth (11.2.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 11.0.0)
-  - Firebase/CoreOnly (11.0.0):
-    - FirebaseCore (= 11.0.0)
-  - Firebase/Database (11.0.0):
+    - FirebaseAuth (~> 11.2.0)
+  - Firebase/CoreOnly (11.2.0):
+    - FirebaseCore (= 11.2.0)
+  - Firebase/Database (11.2.0):
     - Firebase/CoreOnly
-    - FirebaseDatabase (~> 11.0.0)
-  - firebase_auth (5.3.0):
-    - Firebase/Auth (= 11.0.0)
+    - FirebaseDatabase (~> 11.2.0)
+  - firebase_auth (5.3.1):
+    - Firebase/Auth (= 11.2.0)
     - firebase_core
     - Flutter
-  - firebase_core (3.5.0):
-    - Firebase/CoreOnly (= 11.0.0)
+  - firebase_core (3.6.0):
+    - Firebase/CoreOnly (= 11.2.0)
     - Flutter
-  - firebase_database (11.1.3):
-    - Firebase/Database (= 11.0.0)
+  - firebase_database (11.1.4):
+    - Firebase/Database (= 11.2.0)
     - firebase_core
     - Flutter
   - FirebaseAppCheckInterop (11.2.0)
-  - FirebaseAuth (11.0.0):
+  - FirebaseAuth (11.2.0):
     - FirebaseAppCheckInterop (~> 11.0)
     - FirebaseAuthInterop (~> 11.0)
     - FirebaseCore (~> 11.0)
@@ -31,7 +31,7 @@ PODS:
     - GTMSessionFetcher/Core (~> 3.4)
     - RecaptchaInterop (~> 100.0)
   - FirebaseAuthInterop (11.2.0)
-  - FirebaseCore (11.0.0):
+  - FirebaseCore (11.2.0):
     - FirebaseCoreInternal (~> 11.0)
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/Logger (~> 8.0)
@@ -39,7 +39,7 @@ PODS:
     - FirebaseCore (~> 11.0)
   - FirebaseCoreInternal (11.2.0):
     - "GoogleUtilities/NSData+zlib (~> 8.0)"
-  - FirebaseDatabase (11.0.0):
+  - FirebaseDatabase (11.2.0):
     - FirebaseAppCheckInterop (~> 11.0)
     - FirebaseCore (~> 11.0)
     - FirebaseSharedSwift (~> 11.0)
@@ -140,17 +140,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   app_links: e7a6750a915a9e161c58d91bc610e8cd1d4d0ad0
-  Firebase: 9f574c08c2396885b5e7e100ed4293d956218af9
-  firebase_auth: f27287630c4d9e2c3c63e64d9240822ad6b07e5b
-  firebase_core: 2ec6b789859c7c24766344ec71fdf78639402d56
-  firebase_database: 1732a4ff01b8b0b8c261375441aa0a31d1aed982
+  Firebase: 98e6bf5278170668a7983e12971a66b2cd57fc8c
+  firebase_auth: 0c77e299a8f2d1c74d1b1f6b78b3d4d802c19f47
+  firebase_core: 2bedc3136ec7c7b8561c6123ed0239387b53f2af
+  firebase_database: d52bf1a2e0542f565925feed43fa5c4350576ed7
   FirebaseAppCheckInterop: ea21450529cf0ebd132788dd8916a0269abc684f
-  FirebaseAuth: d5cf28be74d7e82257f6a3f717509eff70d3cf4a
+  FirebaseAuth: 2a198b8cdbbbd457f08d74df7040feb0a0e7777a
   FirebaseAuthInterop: 47c09558af5d1b31f16fb352387c72d4804f4a24
-  FirebaseCore: 3cf438f431f18c12cdf2aaf64434648b63f7e383
+  FirebaseCore: a282032ae9295c795714ded2ec9c522fc237f8da
   FirebaseCoreExtension: cda74ddfb001224bd8fd1d6e74698b4ed07803de
   FirebaseCoreInternal: 0c569513412da9f3b31bd0b340013bbee8f295c5
-  FirebaseDatabase: 47b021386877846d30a7f3527c4f4fad8fd04b19
+  FirebaseDatabase: 7f0bcea9a7c0554284019a6bac1d80e7288ee831
   FirebaseSharedSwift: 7a0d78d155ede78407f0fdc89fbc914014c7c540
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_native_splash: edf599c81f74d093a4daf8e17bd7a018854bc778

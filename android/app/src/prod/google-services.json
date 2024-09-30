@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "755151478939",
-    "project_id": "shopme-be675",
-    "storage_bucket": "shopme-be675.appspot.com"
+    "project_number": "664985697787",
+    "project_id": "shopme-3b867",
+    "storage_bucket": "shopme-3b867.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:755151478939:android:33be66a9a19115c592e63e",
+        "mobilesdk_app_id": "1:664985697787:android:4e718492c00aa370675f5e",
         "android_client_info": {
           "package_name": "com.example.shopme"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBOoJhUMqyqvFDSauyiA1BPv4PRb7HHCy4"
+          "current_key": "AIzaSyChUiVU-7HWtwcaKwbF-7sEt6lW_OgZU9g"
         }
       ],
       "services": {

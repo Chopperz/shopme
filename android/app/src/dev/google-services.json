@@ -1,18 +1,24 @@
 {
   "project_info": {
     "project_number": "1075161723771",
+    "firebase_url": "https://shopme-dev-47556-default-rtdb.firebaseio.com",
     "project_id": "shopme-dev-47556",
     "storage_bucket": "shopme-dev-47556.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1075161723771:android:7d13db23f88431294143de",
+        "mobilesdk_app_id": "1:1075161723771:android:4b2199bc32b514534143de",
         "android_client_info": {
-          "package_name": "com.example.shopme"
+          "package_name": "com.example.shopme.dev"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1075161723771-kg6cgjme21ud2k7rgup18gb6oofsqa19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCLpucPOyue-7Dj30tBGviWdBFG5u2sZJM"
@@ -20,7 +26,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075161723771-kg6cgjme21ud2k7rgup18gb6oofsqa19.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075161723771-e5ot4pjh5svb2k6t7pe5fnm4ftqlshpk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shopme.dev"
+              }
+            }
+          ]
         }
       }
     }
