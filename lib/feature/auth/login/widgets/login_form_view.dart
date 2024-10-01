@@ -25,21 +25,7 @@ class _LoginFormViewState extends State<LoginFormView> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<LoginCubit, LoginState>(
-      listenWhen: (prev, curr) => prev.status != curr.status,
-      listener: (context, state) {
-        if (state.status.isSuccess) {
-          context.goNamed(RouteName.home.name);
-        }
-
-        if (state.status.isFailed) {
-          DialogService().showMessage(
-            context,
-            type: DialogMessageType.ERROR,
-            message: state.messageError ?? "Your username or password is incorrect.",
-          );
-        }
-      },
+    return BlocBuilder<LoginCubit, LoginState>(
       builder: (context, state) {
         if (state.status.isLoading) {
           return const SizedBox(

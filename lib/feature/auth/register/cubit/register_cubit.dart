@@ -4,7 +4,7 @@ import 'package:shopme/config/firebase/app_firebase.dart';
 import 'package:shopme/core/enums/enums.dart';
 import 'package:shopme/core/extensions/extensions.dart';
 import 'package:shopme/core/models/src/user/user_model.dart';
-import 'package:uuid/uuid.dart';
+import 'package:shopme/core/repositories/repositories.dart';
 
 part 'register_state.dart';
 
@@ -44,6 +44,7 @@ class RegisterCubit extends Cubit<RegisterState> {
 
     emit(state.copyWith(
       email: email,
+      user: state.user.copyWith(email: email),
       errorText: state.errorText.copyWith(emailError: errorText ?? ""),
     ));
   }
@@ -73,11 +74,7 @@ class RegisterCubit extends Cubit<RegisterState> {
           await AppFirebase.instance.signUpWithEmailAndPassword(state.email, state.password);
 
       if (credential != null) {
-        DatabaseReference ref = AppFirebase.instance.database(path: "users");
-        String userId = credential.user?.uid ?? Uuid().v1();
-        await ref.update({
-          userId: state.user.toJson(),
-        });
+        await UserRepository().createUser(credential, user: state.user);
 
         if (credential.credential != null) {
           await AppFirebase.instance.auth.signInWithCredential(credential.credential!);
