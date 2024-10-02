@@ -5,7 +5,6 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shopme/config/firebase/app_firebase.dart';
-import 'package:shopme/config/router/router.dart';
 import 'package:shopme/core/enums/enums.dart';
 import 'package:shopme/core/extensions/src/state_status_extensions.dart';
 import 'package:shopme/core/models/src/user/user_model.dart';
@@ -72,7 +71,6 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
   Future<void> removeUserOnState(UserLogoutEvent event, Emitter<UserState> emit) async {
     await clear();
     await userRepository.userLogout();
-    AppRouter.navigatorKey.currentState?.popUntil((route) => route.isFirst);
     emit(UserState.logout());
   }
 }
